@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контактная информация | Великая Отечественная война</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Контактная информация</h1>
+            <div class="search-container">
+                <input type="text" class="search-input" placeholder="Поиск по сайту...">
+                <button class="search-button">Найти</button>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="arsenal.html">Вооружение</a></li>
+                <li><a href="gallery.html">Галерея</a></li>
+                <!-- Убрана ссылка "Контакты" -->
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="content-block">
+            <div class="block-header blue">
+                <h2>Обратная связь</h2>
+            </div>
+            <div class="block-content">
+                <div id="greeting" style="display: none;">
+                    <h3 id="greetingText"></h3>
+                    <p id="savedFeedback"></p>
+                    <button id="editForm" type="button">Редактировать данные</button>
+                </div>
+            
+                <form id="contactForm">
+                    <fieldset>
+                        <legend>Контактная информация</legend>
+                    
+                        <div>
+                            <label for="name">Имя:</label>
+                            <input type="text" id="name" name="name" required 
+                               placeholder="Введите ваше имя">
+                        </div>
+                    
+                        <div>
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" required 
+                                placeholder="example@mail.com">
+                        </div>
+                    
+                        <div>
+                            <label for="category">Категория обращения:</label>
+                            <select id="category" name="category" required>
+                                <option value="" selected disabled>-- Выберите категорию --</option>
+                                <option value="question">Вопрос</option>
+                                <option value="feedback">Отзыв</option>
+                                <option value="complaint">Жалоба</option>
+                                <option value="suggestion">Предложение</option>
+                                <option value="other">Другое</option>
+                            </select>
+                        </div>
+                    
+                        <div>
+                            <label for="feedback">Отзыв:</label>
+                            <textarea id="feedback" name="feedback" rows="5" 
+                                    placeholder="Введите ваш отзыв здесь..." required></textarea>
+                        </div>
+                    
+                        <div>
+                            <button type="submit">Отправить</button>
+                            <button type="reset">Очистить форму</button>
+                        </div>
+                    </fieldset>
+                </form>
+            
+                <div id="successMessage" style="display: none;">
+                    <h3>Данные успешно отправлены и сохранены!</h3>
+                    <p>Ваша контактная информация сохранена в localStorage.</p>
+                    <p>При следующем посещении страницы вы увидите приветствие.</p>
+                    <button id="showForm" type="button">Показать форму снова</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&#169 2025 Сайт о Великой Отечественной войне</p>
+        <div class="footer-formlink">
+            <a href="form.html">Контактная информация</a>
+        </div>
+    </footer>
+</body>
+</html>
