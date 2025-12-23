@@ -1108,8 +1108,7 @@ button[type="reset"]:hover,
     }
     
     nav ul {
-        flex-direction: column;
-        gap: 0.5rem;
+        justify-content: center;
         margin-top: 0.5rem;
     }
     
@@ -1223,4 +1222,5 @@ mark.search-highlight {
         padding: 0.4rem 0.8rem;
         font-size: 0.85rem;
     }
+
 }
